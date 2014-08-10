@@ -1,0 +1,15 @@
+svg {
+    width: 640px;
+    height: 960px;
+    background-color: rgb(244,244,244);
+}
+
+circle {
+    fill: #ccc;
+    stroke: #999;
+    background-color: gray;
+    color: grey;
+}
+.svgContainer{
+    text-align: center;
+}
