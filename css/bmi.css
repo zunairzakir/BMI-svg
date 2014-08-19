@@ -1,15 +1,14 @@
-svg {
-    width: 640px;
-    height: 960px;
-    background-color: rgb(244,244,244);
-}
 
-circle {
-    fill: #ccc;
-    stroke: #999;
-    background-color: gray;
-    color: grey;
-}
 .svgContainer{
     text-align: center;
+}
+svg{
+    background-color: lightgray;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+.wide-item {
+    width: 100%;
 }

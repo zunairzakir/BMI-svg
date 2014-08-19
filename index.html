@@ -1,49 +1,335 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="BMI-svg">
 <head>
     <title>d3</title>
+    <link rel="stylesheet" type="text/css" href="./bootstrap-3.2.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./bootstrap-3.2.0-dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="css/bmi.css">
+    <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/d3.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <!--<script src="js/positionsDirective.js"></script>-->
+    <script src="./bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
 </head>
-<body>
-<div class="svgContainer">
-<svg>
+<body data-ng-controller="bmiCtrl">
+
+<div class="svgContainer  col-sm-12 col-xs-12" >
+
+<svg width="645px" height="960px">
+
+<g>
+
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="1311.3828" y1="114.1191" x2="1311.3828" y2="350.1187" gradientTransform="matrix(3.967 0 0 4.0678 -4879.25 -463.2109)">
+		<stop  offset="0" style="stop-color:#FCFCFC"/>
+		<stop  offset="1" style="stop-color:#EDEDED"/>
+	</linearGradient>
+
+	<rect x="3" y="1" fill="url(#SVGID_1_)" width="640" height="960"/>
+        <ellipse cx="320" cy="945" rx="95" ry="50" style="fill:url(#SVGID_1_)" />
+
+        <rect x="112" y="783" width="415" height="130"
+              style="fill:white;stroke:rgb(238,238,238);stroke-width:10;opacity:1" />
+        <rect x="120" y="790" width="400" height="125"
+              style="fill:white;stroke-width:10;opacity:1" />
+        <ellipse cx="320" cy="760"  rx="95" ry="50"style="fill:url(#SVGID_1_)" />
+
+        <rect x="112" y="617" width="415" height="130"
+              style="fill:white;stroke:rgb(238,238,238);stroke-width:10;opacity:1" />
+        <rect x="120" y="625" width="400" height="125"
+              style="fill:white;stroke-width:10;opacity:1" />
+        <ellipse cx="320" cy="595" rx="95" ry="50" style="fill:url(#SVGID_1_)" />
+   <!--     <foreignObject width="500" height="400" x="150" y="450" style="background-color: #000000" requiredExtensions="http://www.w3.org/1999/xhtml">
+            &lt;!&ndash; XHTML content goes here &ndash;&gt;
+            <body xmlns="http://www.w3.org/1999/xhtml">
+            <div class="svgContainer">
+                <svg width="400" height="140" style="background-color: #000000"></svg>
+            </div>
+            </body>
+        </foreignObject>-->
+
+       <!-- <g>
+        <line class="line" ng-repeat="largeHeight in heightMeter10" fill="none" stroke="#00BAFF" stroke-width="2.086" stroke-miterlimit="10" set-values obj="largeHeight"></line>
+        <line class="line" ng-repeat="mediumHeight in heightMeter5"fill="none" stroke="#00BAFF" stroke-width="1.5645" stroke-miterlimit="10" set-values obj="mediumHeight"></line>
+            <g>
+        <line class="line" ng-repeat="smallHeight in heightMeter1" fill="none" stroke="#00BAFF" stroke-width="1.043" stroke-miterlimit="10" set-values obj="smallHeight"></line>
+             </g>
+        </g>
+        <g>
+        <line  ng-repeat="smallWeight in weightMeter10" fill="none" stroke="#FF7400" stroke-width="1.043" stroke-miterlimit="10" set-values obj="smallWeight"></line>
+        <line  ng-repeat="mediumWeight in weightMeter5"fill="none" stroke="#FF7400" stroke-width="1.5645" stroke-miterlimit="10" set-values obj="mediumWeight" ></line>
+            <g>
+            <line  ng-repeat="smallWeight in weightMeter1" fill="none" stroke="#FF7400" stroke-width="1.043" stroke-miterlimit="10" set-values obj="smallWeight"></line>
+            </g>
+        </g>
+
+-->
+        <rect x="524" y="580" fill="url(#SVGID_1_)" width="120" height="360"></rect>
+        <rect x="2" y="580" fill="url(#SVGID_1_)" width="118" height="360"></rect>
+
+
+
+        <text x="40" style="font-size: 30;" y="470" fill="#00BAFF" >Height</text>
+        <text x="40" style="font-size: 30;" y="470" fill="#FF7400" >Weight</text>
+
+        <rect x="0" y="430" width="320" height="150"
+          style="fill:white;stroke:rgb(238,238,238);stroke-width:15;opacity:1"  />
+    <text x="40" style="font-size: 30;" y="470" fill="darkgrey" >Height</text>
+    <rect x="320" y="430" width="320" height="150"
+          style="fill:white;stroke:rgb(238,238,238);stroke-width:15;opacity:1"  />
+        <g>
+            <path fill="#DE0108" d="M320.583,808.475v18.305l8.813-18.517C326.473,808.387,323.538,808.473,320.583,808.475z"/>
+            <path fill="#A70002" d="M311.779,808.283l8.804,18.496v-18.305c-0.07,0-0.139,0.004-0.209,0.004      C317.493,808.479,314.631,808.398,311.779,808.283z"/>
+
+        </g>
+
+    <text x="510" style="font-size: 30;" y="470" fill="darkgrey"  >Weight</text>
+
+        <text x="25" style="font-size: 45;" y="520" fill="#00BAFF" >175 cm</text>
+        <text x="45" style="font-size: 20;" y="550" fill="#00BAFF" >Cm</text>
+        <text x="85" style="font-size: 20;" y="550" fill="grey" >/</text>
+        <text x="95" style="font-size: 20;" y="550" fill="grey" >ft In</text>
+        <text x="470" style="font-size: 45;" y="520" fill="#FF7400"  >110 kg</text>
+        <text x="510" style="font-size: 20;" y="550" fill="#FF7400"  >Kg</text>
+        <text x="540" style="font-size: 20;" y="550" fill="grey"  >/</text>
+        <text x="550" style="font-size: 20;" y="550" fill="grey"  >Lbs</text>
+	<g>
+		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="321.0347" y1="34.8696" x2="321.0346" y2="523.9524">
+			<stop  offset="0" style="stop-color:#F0F0F0"/>
+			<stop  offset="1" style="stop-color:#EEEEEE"/>
+		</linearGradient>
+		<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="321.0356" y1="525.8916" x2="321.0356" y2="29.4316">
+			<stop  offset="0" style="stop-color:#FFFFFF"/>
+			<stop  offset="1" style="stop-color:#DEDEDE"/>
+		</linearGradient>
+
+			<circle fill="url(#SVGID_2_)" stroke="url(#SVGID_3_)" stroke-width="2.087" stroke-miterlimit="10" cx="321.035" cy="277.661" r="247.187"/>
+		<g>
+
+
+			<g>
+				<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="320.9131" y1="58.105" x2="320.9131" y2="490.8132">
+					<stop  offset="0" style="stop-color:#FFFFFF"/>
+					<stop  offset="1" style="stop-color:#EBEBEB"/>
+				</linearGradient>
+				<circle fill="white" cx="320.913" cy="272.91" r="218.694"/>
+				<circle fill="none" stroke="#E6E7E8" stroke-width="2.1869" stroke-miterlimit="10" cx="320.913" cy="272.91" r="218.694"/>
+                <ellipse cx="320" cy="277" rx="127" ry="127" fill="lightgrey "></ellipse>
+			</g>
+		</g>
+		<g>
+			<g>
+				<g>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="319.936" y1="94.208" x2="319.936" y2="121.066"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="257.348" y1="105.242" x2="266.538" y2="130.482"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="202.314" y1="137.018" x2="219.578" y2="157.593"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="161.463" y1="185.701" x2="184.725" y2="199.129"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="139.73" y1="245.419" x2="166.179" y2="250.083"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="500.142" y1="245.42" x2="473.689" y2="250.084"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="478.406" y1="185.701" x2="455.145" y2="199.131"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="437.557" y1="137.018" x2="420.29" y2="157.594"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="382.52" y1="105.242" x2="373.332" y2="130.484"/>
+				</g>
+				<g>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="308.107" y1="108.051" x2="309.043" y2="121.447"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="296.337" y1="109.286" x2="298.207" y2="122.588"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="284.682" y1="111.341" x2="287.477" y2="124.479"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="273.199" y1="114.205" x2="276.902" y2="127.115"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="250.972" y1="122.295" x2="256.436" y2="134.564"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="240.335" y1="127.484" x2="246.641" y2="139.342"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="230.086" y1="133.4" x2="237.203" y2="144.789"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="220.274" y1="140.02" x2="228.168" y2="150.883"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="202.156" y1="155.224" x2="211.482" y2="164.883"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="193.934" y1="163.736" x2="203.913" y2="172.723"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="186.327" y1="172.801" x2="196.908" y2="181.068"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="179.372" y1="182.377" x2="190.503" y2="189.885"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="167.544" y1="202.861" x2="179.612" y2="208.747"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="162.731" y1="213.673" x2="175.179" y2="218.702"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="158.685" y1="224.794" x2="171.452" y2="228.943"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="155.422" y1="236.169" x2="168.449" y2="239.418"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="484.441" y1="236.173" x2="471.424" y2="239.423"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="481.18" y1="224.798" x2="468.419" y2="228.946"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="477.133" y1="213.678" x2="464.693" y2="218.706"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="472.319" y1="202.867" x2="460.261" y2="208.751"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="460.492" y1="182.381" x2="449.37" y2="189.886"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="453.537" y1="172.809" x2="442.966" y2="181.069"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="445.93" y1="163.742" x2="435.962" y2="172.723"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="437.711" y1="155.229" x2="428.391" y2="164.883"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="419.59" y1="140.024" x2="411.704" y2="150.881"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="409.779" y1="133.407" x2="402.672" y2="144.786"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="399.531" y1="127.49" x2="393.234" y2="139.338"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="388.895" y1="122.302" x2="383.438" y2="134.561"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="366.666" y1="114.213" x2="362.973" y2="127.111"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="355.185" y1="111.35" x2="352.397" y2="124.473"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="343.529" y1="109.296" x2="341.666" y2="122.582"/>
+
+						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="331.761" y1="108.059" x2="330.827" y2="121.442"/>
+				</g>
+			</g>
+
+		</g>
+		<g>
+			<path fill="none" stroke="#EF0000" stroke-width="4.8923" stroke-miterlimit="10" d="M410.928,151.412
+				c39.928,28.153,66.011,74.632,66.011,127.203"/>
+			<path fill="none" stroke="#EF9B00" stroke-width="4.8923" stroke-miterlimit="10" d="M370.589,131.016
+				c14.515,4.836,28.08,11.754,40.339,20.396"/>
+			<path fill="none" stroke="#00EF50" stroke-width="4.8923" stroke-miterlimit="10" d="M307.828,123.662
+				c4.473-0.385,9.001-0.582,13.575-0.582c17.188,0,33.728,2.787,49.186,7.936"/>
+			<path fill="none" stroke="#FBCF40" stroke-width="4.8923" stroke-miterlimit="10" d="M165.867,278.615
+				c0-81.328,62.419-148.076,141.961-154.953"/>
+		</g>
+		<g>
+			<g>
+				<linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="320.7188" y1="170.5806" x2="320.7188" y2="426.1707">
+					<stop  offset="0" style="stop-color:#FFFFFF"/>
+					<stop  offset="0.4616" style="stop-color:#FCFCFC"/>
+					<stop  offset="0.8481" style="stop-color:#F1F1F1"/>
+					<stop  offset="1" style="stop-color:#EBEBEB"/>
+				</linearGradient>
+				<circle fill="url(#SVGID_5_)" cx="320.719" cy="276.396" r="111.679"/>
+				<linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="320.7192" y1="388.5732" x2="320.7192" y2="164.2197">
+					<stop  offset="0" style="stop-color:#FAFAFA"/>
+					<stop  offset="0.4377" style="stop-color:#F1F1F1"/>
+					<stop  offset="1" style="stop-color:#EDEDED"/>
+				</linearGradient>
+
+					<circle fill="none" stroke="url(#SVGID_6_)" stroke-width="0.9946" stroke-miterlimit="10" cx="320.719" cy="276.396" r="111.679"/>
+			</g>
+		</g>
+		<polygon fill="#FF0000" points="258.502,157.896 226.36,102.224 224.874,83.536 217.409,87.846 217.208,87.498 217.409,87.846
+			209.945,92.154 225.387,102.786 257.528,158.459 		"/>
+		<g>
+			<g>
+				<g>
+					<linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="321.186" y1="135.8301" x2="321.186" y2="539.1757">
+						<stop  offset="0" style="stop-color:#FFFFFF"/>
+						<stop  offset="0.5455" style="stop-color:#F6F6F6"/>
+						<stop  offset="1" style="stop-color:#EBEBEB"/>
+					</linearGradient>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+                <text x="240" style="font-size: 124;" y="290" fill="#FBCF40">13</text>
+                <text x="295" style="font-size: 28" y="365" fill="darkgrey">BMI</text>
+			</g>
+		</g>
+	</g>
+	<g>
+        <g>
+            <path fill="#DE0108" d="M320.583,642.736v18.305l8.813-18.517C326.473,642.648,323.538,642.734,320.583,642.736z"/>
+            <path fill="#A70002" d="M311.779,642.545l8.804,18.496v-18.305c-0.07,0.001-0.139,0.004-0.209,0.004      C317.493,642.74,314.631,642.66,311.779,642.545z"/>
+        </g>
+
+        </g>
+            </g>
+        </g>
+</g>
+</svg>
+<div zooming="true" direction="xy" style="width: 300px; height: 100px">
+<span  ng-repeat="height in heightMeter10_5_1" style="font-size : {{height.fontSize+'px'}}">|</span></div>
+  <!--  <div>
+        <span style="font-size: 40px;" ng-repeat="smallWeight in weightMeter10" fill="none" stroke="#FF7400" stroke-width="1.043" stroke-miterlimit="10">|</span>
+        <span style="font-size: 30px;" ng-repeat="mediumWeight in weightMeter5"fill="none" stroke="#FF7400" stroke-width="1.5645" stroke-miterlimit="10" >|</span>
+        <span style="font-size: 20px;" ng-repeat="smallWeight in weightMeter1" fill="none" stroke="#FF7400" stroke-width="1.043" stroke-miterlimit="10">|</span>
+
+    </div>-->
+
+<!--<svg>
 
     <rect x="0" y="400" width="320" height="150"
-          style="fill:white;stroke:rgb(238,238,238);stroke-width:15;opacity:1" />
-    <text x="40" style="font-size: 30;" y="450" fill="darkgrey">Height</text>
+          style="fill:white;stroke:rgb(238,238,238);stroke-width:15;opacity:1"  />
+    <text x="40" style="font-size: 30;" y="450" fill="darkgrey" >Height</text>
     <rect x="320" y="400" width="320" height="150"
-          style="fill:white;stroke:rgb(238,238,238);stroke-width:15;opacity:1" />
-    <text x="510" style="font-size: 30;" y="450" fill="darkgrey">Weight</text>
+          style="fill:white;stroke:rgb(238,238,238);stroke-width:15;opacity:1"  />
+    <text x="510" style="font-size: 30;" y="450" fill="darkgrey"  >Weight</text>
 
 
-    <text x="25" style="font-size: 45;" y="500" fill="lightblue">175 cm</text>
-    <text x="470" style="font-size: 45;" y="500" fill="red">110 kg</text>
+    <text x="25" style="font-size: 45;" y="500" fill="#00BAFF" >175 cm</text>
+    <text x="45" style="font-size: 20;" y="530" fill="#00BAFF" >Cm</text>
+    <text x="85" style="font-size: 20;" y="530" fill="grey" >/</text>
+    <text x="95" style="font-size: 20;" y="530" fill="grey" >ft In</text>
+    <text x="470" style="font-size: 45;" y="500" fill="#FF7400"  >110 kg</text>
+    <text x="510" style="font-size: 20;" y="530" fill="#FF7400"  >Kg</text>
+    <text x="540" style="font-size: 20;" y="530" fill="grey"  >/</text>
+    <text x="550" style="font-size: 20;" y="530" fill="grey"  >Lbs</text>
 
     <ellipse cx="310" cy="240" rx="240" ry="240" fill="rgb(238,238,238)" />
     <ellipse cx="310" cy="240" rx="220" ry="220" fill="lightgrey" />
     <ellipse cx="310" cy="240" rx="205" ry="205" fill="white" />
     <ellipse cx="310" cy="240" rx="127" ry="127" fill="lightgrey " />
+    <polygon fill="#FF0000" points="258.502,157.896 226.36,102.224 224.874,83.536 217.409,87.846 217.208,87.498 217.409,87.846
+        209.945,92.154 225.387,102.786 257.528,158.459 		"/>
     <ellipse cx="310" cy="240" rx="105" ry="105" fill="white" />
     <ellipse cx="310" cy="240" rx="90" ry="90" fill="white" />
-    <!--<ellipse cx="310" cy="240" rx="100" ry="100" fill="lightgrey" />-->
-    <ellipse cx="310" cy="240" rx="90" ry="90" fill="white" />
-    <text x="250" style="font-size: 104;" y="260" fill="orange">13</text>
-    <text x="275" style="font-size: 32" y="320" fill="darkgrey">BMI</text>
-    <!--<path d="M 190 180 q 100 -145 225 -20" stroke="blue" stroke-width="5" fill="none" />-->
+    &lt;!&ndash;<ellipse cx="310" cy="240" rx="100" ry="100" fill="lightgrey" />&ndash;&gt;
+        <ellipse cx="310" cy="240" rx="90" ry="90" fill="white" />
+        <text x="250" style="font-size: 104;" y="260" fill="orange">13</text>
+        <text x="275" style="font-size: 32" y="320" fill="darkgrey">BMI</text>
+        &lt;!&ndash;<path d="M 190 180 q 100 -145 225 -20" stroke="blue" stroke-width="5" fill="none" />&ndash;&gt;
 
-    <rect x="120" y="590" width="400" height="135"
-          style="fill:white;stroke-width:10;opacity:1" />
-    <ellipse cx="320" cy="575" rx="90" ry="45" style="fill:rgb(244,244,244)" />
+        <rect x="120" y="590" width="400" height="135"
+              style="fill:white;stroke-width:10;opacity:1" />
+        <ellipse cx="320" cy="575" rx="90" ry="45" style="fill:rgb(243,243,243)" />
 
-    <rect x="120" y="770" width="400" height="135"
-          style="fill:white;stroke-width:10;opacity:1" />
-    <ellipse cx="320" cy="755" rx="90" ry="45" style="fill:rgb(244,244,244)" />
-    <ellipse cx="320" cy="925" rx="90" ry="45" style="fill:rgb(244,244,244)" />
 
-</svg>
+
+        <rect x="120" y="770" width="400" height="135"
+              style="fill:white;stroke-width:10;opacity:1" />
+        <ellipse cx="320" cy="755" rx="90" ry="45" style="fill:rgb(243,243,243)" />
+        <ellipse cx="320" cy="925" rx="90" ry="45" style="fill:rgb(243,243,243)" />
+        <line x1="195" y1="0" x2="195.3" y2="10" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line x1="195" y1="0" x2="195.3" y2="10" style="stroke:rgb(255,0,0);stroke-width:2" />
+
+
+        &lt;!&ndash;<line fill="none" stroke="#ff7400" stroke-miterlimit="10" stroke-width="2.086" x1="227.88" y1="912.945" x2="227.88" y2="872.617" />&ndash;&gt;
+        &lt;!&ndash;<line fill="none" stroke="#ff7400" stroke-miterlimit="10" stroke-width="1.5645" x1="274.638" y1="912.945" x2="274.638" y2="882.012" />&ndash;&gt;
+        &lt;!&ndash;<line fill="none" stroke="#ff7400" stroke-miterlimit="10" stroke-width="1.043" x1="106.311" y1="912.945" x2="106.311" y2="891.406" />&ndash;&gt;
+    </svg>-->
 </div>
 </body>
+
+
 <script src="js/bmi.js"></script>
 
 </html>
