@@ -1,0 +1,33 @@
+svg{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+
+}
+body{
+    background-color: lightgray;
+}
+#rect{
+    height: 100%;
+    width: 100%;
+}
+.niddle{
+    -webkit-transform: rotate(68deg);
+    -webkit-transform-origin: 34% 100%;
+}
+.scroll-bar {
+    display: none;
+}
+
+.scroll-bar-h{
+    display: none;
+}
+#splashScreen{
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none;
+}

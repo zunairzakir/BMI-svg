@@ -1,335 +1,520 @@
 <!DOCTYPE html>
-<html ng-app="BMI-svg">
+<html>
 <head>
-    <title>d3</title>
-    <link rel="stylesheet" type="text/css" href="./bootstrap-3.2.0-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="./bootstrap-3.2.0-dist/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bmi.css">
-    <script src="js/jquery-2.1.1.min.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <script src="js/d3.min.js"></script>
-    <script src="js/angular.min.js"></script>
-    <!--<script src="js/positionsDirective.js"></script>-->
-    <script src="./bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+
 </head>
-<body data-ng-controller="bmiCtrl">
+<body ng-app="starter" animation="slide-left-right-ios7" class="platform-android platform-cordova platform-webview">
+<div ng-controller="DashCtrl" style="height: 100%;width: 100%;">
+   <div id="splashDiv">
+       <img id="splashScreen" src="img/splash.png" alt="splash"/>
+   </div>
+   <svg id="Layer_1" x="0px" y="0px" viewBox="0 0 612 792" enable-background="new 0 0 612 792"fill="#F7F7F8">
 
-<div class="svgContainer  col-sm-12 col-xs-12" >
-
-<svg width="645px" height="960px">
 
 <g>
 
-		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="1311.3828" y1="114.1191" x2="1311.3828" y2="350.1187" gradientTransform="matrix(3.967 0 0 4.0678 -4879.25 -463.2109)">
-		<stop  offset="0" style="stop-color:#FCFCFC"/>
-		<stop  offset="1" style="stop-color:#EDEDED"/>
-	</linearGradient>
+    <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="1295.3906" y1="29.9497" x2="1295.3906" y2="265.9497" gradientTransform="matrix(3.967 0 0 4.0678 -4831.7773 -205.5162)">
+        <stop  offset="0" style="stop-color:#FDFEFF"/>
+        <stop  offset="1" style="stop-color:#EDEDED"/>
+    </linearGradient></g>
+<rect x="-12.967" y="-83.688" fill="url(#SVGID_1_)" width="640" height="960" id="rect"/>
 
-	<rect x="3" y="1" fill="url(#SVGID_1_)" width="640" height="960"/>
-        <ellipse cx="320" cy="945" rx="95" ry="50" style="fill:url(#SVGID_1_)" />
+<g>  <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="305.0679" y1="-49.8184" x2="305.0678" y2="439.2649">
+    <stop  offset="0" style="stop-color:#F1F0F0"/>
+    <stop  offset="1" style="stop-color:#EFEEEE"/>
+</linearGradient>
+    <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="305.0688" y1="441.2041" x2="305.0688" y2="-55.2563">
+        <stop  offset="0" style="stop-color:#FFFFFF"/>
+        <stop  offset="1" style="stop-color:#DFDFDE"/>
+    </linearGradient></g>
 
-        <rect x="112" y="783" width="415" height="130"
-              style="fill:white;stroke:rgb(238,238,238);stroke-width:10;opacity:1" />
-        <rect x="120" y="790" width="400" height="125"
-              style="fill:white;stroke-width:10;opacity:1" />
-        <ellipse cx="320" cy="760"  rx="95" ry="50"style="fill:url(#SVGID_1_)" />
+<circle fill="url(#SVGID_2_)" stroke="url(#SVGID_3_)" stroke-width="2.087" stroke-miterlimit="10" cx="305.068" cy="192.973" r="247.187"/>
 
-        <rect x="112" y="617" width="415" height="130"
-              style="fill:white;stroke:rgb(238,238,238);stroke-width:10;opacity:1" />
-        <rect x="120" y="625" width="400" height="125"
-              style="fill:white;stroke-width:10;opacity:1" />
-        <ellipse cx="320" cy="595" rx="95" ry="50" style="fill:url(#SVGID_1_)" />
-   <!--     <foreignObject width="500" height="400" x="150" y="450" style="background-color: #000000" requiredExtensions="http://www.w3.org/1999/xhtml">
-            &lt;!&ndash; XHTML content goes here &ndash;&gt;
-            <body xmlns="http://www.w3.org/1999/xhtml">
-            <div class="svgContainer">
-                <svg width="400" height="140" style="background-color: #000000"></svg>
-            </div>
-            </body>
-        </foreignObject>-->
 
-       <!-- <g>
-        <line class="line" ng-repeat="largeHeight in heightMeter10" fill="none" stroke="#00BAFF" stroke-width="2.086" stroke-miterlimit="10" set-values obj="largeHeight"></line>
-        <line class="line" ng-repeat="mediumHeight in heightMeter5"fill="none" stroke="#00BAFF" stroke-width="1.5645" stroke-miterlimit="10" set-values obj="mediumHeight"></line>
-            <g>
-        <line class="line" ng-repeat="smallHeight in heightMeter1" fill="none" stroke="#00BAFF" stroke-width="1.043" stroke-miterlimit="10" set-values obj="smallHeight"></line>
-             </g>
+
+<g>
+    <linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="304.9463" y1="-26.583" x2="304.9463" y2="406.1257">
+        <stop  offset="0" style="stop-color:#FFFFFF"/>
+        <stop  offset="1" style="stop-color:#EBEBEB"/>
+    </linearGradient></g>
+<circle fill="url(#SVGID_4_)" cx="304.947" cy="188.222" r="218.694"/>
+<circle fill="none" stroke="#E7E7E7" stroke-width="2.1869" stroke-miterlimit="10" cx="304.947" cy="188.222" r="218.694"/>
+
+<g>
+    <g>
+        <g>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="303.969" y1="9.52" x2="303.969" y2="36.378"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="241.381" y1="20.554" x2="250.571" y2="45.794"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="186.348" y1="52.33" x2="203.611" y2="72.905"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="145.497" y1="101.013" x2="168.758" y2="114.441"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="123.763" y1="160.731" x2="150.212" y2="165.395"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="484.175" y1="160.732" x2="457.723" y2="165.396"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="462.439" y1="101.013" x2="439.178" y2="114.443"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="421.59" y1="52.33" x2="404.323" y2="72.906"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="366.553" y1="20.554" x2="357.365" y2="45.796"/>
         </g>
         <g>
-        <line  ng-repeat="smallWeight in weightMeter10" fill="none" stroke="#FF7400" stroke-width="1.043" stroke-miterlimit="10" set-values obj="smallWeight"></line>
-        <line  ng-repeat="mediumWeight in weightMeter5"fill="none" stroke="#FF7400" stroke-width="1.5645" stroke-miterlimit="10" set-values obj="mediumWeight" ></line>
-            <g>
-            <line  ng-repeat="smallWeight in weightMeter1" fill="none" stroke="#FF7400" stroke-width="1.043" stroke-miterlimit="10" set-values obj="smallWeight"></line>
-            </g>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="292.141" y1="23.363" x2="293.077" y2="36.759"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="280.37" y1="24.598" x2="282.24" y2="37.9"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="268.715" y1="26.653" x2="271.51" y2="39.791"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="257.232" y1="29.517" x2="260.935" y2="42.427"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="235.005" y1="37.607" x2="240.469" y2="49.876"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="224.369" y1="42.796" x2="230.674" y2="54.654"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="214.119" y1="48.712" x2="221.236" y2="60.101"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="204.307" y1="55.332" x2="212.202" y2="66.195"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="186.189" y1="70.536" x2="195.516" y2="80.195"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="177.967" y1="79.048" x2="187.946" y2="88.035"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="170.36" y1="88.113" x2="180.941" y2="96.38"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="163.405" y1="97.689" x2="174.536" y2="105.197"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="151.577" y1="118.173" x2="163.646" y2="124.059"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="146.765" y1="128.985" x2="159.212" y2="134.014"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="142.718" y1="140.106" x2="155.485" y2="144.255"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="139.456" y1="151.481" x2="152.482" y2="154.73"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="468.475" y1="151.485" x2="455.457" y2="154.735"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="465.213" y1="140.11" x2="452.452" y2="144.258"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="461.166" y1="128.99" x2="448.727" y2="134.018"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="456.353" y1="118.179" x2="444.294" y2="124.063"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="444.525" y1="97.693" x2="433.403" y2="105.198"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="437.57" y1="88.121" x2="426.999" y2="96.381"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="429.963" y1="79.054" x2="419.995" y2="88.035"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="421.744" y1="70.542" x2="412.424" y2="80.195"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="403.623" y1="55.336" x2="395.737" y2="66.193"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="393.813" y1="48.719" x2="386.705" y2="60.098"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="383.564" y1="42.802" x2="377.268" y2="54.65"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="372.928" y1="37.614" x2="367.472" y2="49.873"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="350.699" y1="29.525" x2="347.006" y2="42.423"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="339.218" y1="26.662" x2="336.431" y2="39.785"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="327.563" y1="24.608" x2="325.699" y2="37.894"/>
+
+            <line fill="none" stroke="#2BACE2" stroke-width="0.9583" stroke-miterlimit="10" x1="315.794" y1="23.371" x2="314.86" y2="36.754"/>
         </g>
+    </g>
 
--->
-        <rect x="524" y="580" fill="url(#SVGID_1_)" width="120" height="360"></rect>
-        <rect x="2" y="580" fill="url(#SVGID_1_)" width="118" height="360"></rect>
-
-
-
-        <text x="40" style="font-size: 30;" y="470" fill="#00BAFF" >Height</text>
-        <text x="40" style="font-size: 30;" y="470" fill="#FF7400" >Weight</text>
-
-        <rect x="0" y="430" width="320" height="150"
-          style="fill:white;stroke:rgb(238,238,238);stroke-width:15;opacity:1"  />
-    <text x="40" style="font-size: 30;" y="470" fill="darkgrey" >Height</text>
-    <rect x="320" y="430" width="320" height="150"
-          style="fill:white;stroke:rgb(238,238,238);stroke-width:15;opacity:1"  />
+    <g>
         <g>
-            <path fill="#DE0108" d="M320.583,808.475v18.305l8.813-18.517C326.473,808.387,323.538,808.473,320.583,808.475z"/>
-            <path fill="#A70002" d="M311.779,808.283l8.804,18.496v-18.305c-0.07,0-0.139,0.004-0.209,0.004      C317.493,808.479,314.631,808.398,311.779,808.283z"/>
-
+            <path fill="#A8AAAD" d="M118.413,159.979c0,3.375-1.252,5.239-3.452,5.239c-1.94,0-3.253-1.817-3.284-5.102
+						c0-3.33,1.436-5.163,3.452-5.163C117.221,154.953,118.413,156.816,118.413,159.979z M113.021,160.131
+						c0,2.582,0.794,4.048,2.016,4.048c1.375,0,2.031-1.604,2.031-4.139c0-2.444-0.626-4.048-2.016-4.048
+						C113.876,155.992,113.021,157.428,113.021,160.131z"/>
         </g>
-
-    <text x="510" style="font-size: 30;" y="470" fill="darkgrey"  >Weight</text>
-
-        <text x="25" style="font-size: 45;" y="520" fill="#00BAFF" >175 cm</text>
-        <text x="45" style="font-size: 20;" y="550" fill="#00BAFF" >Cm</text>
-        <text x="85" style="font-size: 20;" y="550" fill="grey" >/</text>
-        <text x="95" style="font-size: 20;" y="550" fill="grey" >ft In</text>
-        <text x="470" style="font-size: 45;" y="520" fill="#FF7400"  >110 kg</text>
-        <text x="510" style="font-size: 20;" y="550" fill="#FF7400"  >Kg</text>
-        <text x="540" style="font-size: 20;" y="550" fill="grey"  >/</text>
-        <text x="550" style="font-size: 20;" y="550" fill="grey"  >Lbs</text>
-	<g>
-		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="321.0347" y1="34.8696" x2="321.0346" y2="523.9524">
-			<stop  offset="0" style="stop-color:#F0F0F0"/>
-			<stop  offset="1" style="stop-color:#EEEEEE"/>
-		</linearGradient>
-		<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="321.0356" y1="525.8916" x2="321.0356" y2="29.4316">
-			<stop  offset="0" style="stop-color:#FFFFFF"/>
-			<stop  offset="1" style="stop-color:#DEDEDE"/>
-		</linearGradient>
-
-			<circle fill="url(#SVGID_2_)" stroke="url(#SVGID_3_)" stroke-width="2.087" stroke-miterlimit="10" cx="321.035" cy="277.661" r="247.187"/>
-		<g>
-
-
-			<g>
-				<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="320.9131" y1="58.105" x2="320.9131" y2="490.8132">
-					<stop  offset="0" style="stop-color:#FFFFFF"/>
-					<stop  offset="1" style="stop-color:#EBEBEB"/>
-				</linearGradient>
-				<circle fill="white" cx="320.913" cy="272.91" r="218.694"/>
-				<circle fill="none" stroke="#E6E7E8" stroke-width="2.1869" stroke-miterlimit="10" cx="320.913" cy="272.91" r="218.694"/>
-                <ellipse cx="320" cy="277" rx="127" ry="127" fill="lightgrey "></ellipse>
-			</g>
-		</g>
-		<g>
-			<g>
-				<g>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="319.936" y1="94.208" x2="319.936" y2="121.066"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="257.348" y1="105.242" x2="266.538" y2="130.482"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="202.314" y1="137.018" x2="219.578" y2="157.593"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="161.463" y1="185.701" x2="184.725" y2="199.129"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="139.73" y1="245.419" x2="166.179" y2="250.083"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="500.142" y1="245.42" x2="473.689" y2="250.084"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="478.406" y1="185.701" x2="455.145" y2="199.131"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="437.557" y1="137.018" x2="420.29" y2="157.594"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="382.52" y1="105.242" x2="373.332" y2="130.484"/>
-				</g>
-				<g>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="308.107" y1="108.051" x2="309.043" y2="121.447"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="296.337" y1="109.286" x2="298.207" y2="122.588"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="284.682" y1="111.341" x2="287.477" y2="124.479"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="273.199" y1="114.205" x2="276.902" y2="127.115"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="250.972" y1="122.295" x2="256.436" y2="134.564"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="240.335" y1="127.484" x2="246.641" y2="139.342"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="230.086" y1="133.4" x2="237.203" y2="144.789"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="220.274" y1="140.02" x2="228.168" y2="150.883"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="202.156" y1="155.224" x2="211.482" y2="164.883"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="193.934" y1="163.736" x2="203.913" y2="172.723"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="186.327" y1="172.801" x2="196.908" y2="181.068"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="179.372" y1="182.377" x2="190.503" y2="189.885"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="167.544" y1="202.861" x2="179.612" y2="208.747"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="162.731" y1="213.673" x2="175.179" y2="218.702"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="158.685" y1="224.794" x2="171.452" y2="228.943"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="155.422" y1="236.169" x2="168.449" y2="239.418"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="484.441" y1="236.173" x2="471.424" y2="239.423"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="481.18" y1="224.798" x2="468.419" y2="228.946"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="477.133" y1="213.678" x2="464.693" y2="218.706"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="472.319" y1="202.867" x2="460.261" y2="208.751"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="460.492" y1="182.381" x2="449.37" y2="189.886"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="453.537" y1="172.809" x2="442.966" y2="181.069"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="445.93" y1="163.742" x2="435.962" y2="172.723"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="437.711" y1="155.229" x2="428.391" y2="164.883"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="419.59" y1="140.024" x2="411.704" y2="150.881"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="409.779" y1="133.407" x2="402.672" y2="144.786"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="399.531" y1="127.49" x2="393.234" y2="139.338"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="388.895" y1="122.302" x2="383.438" y2="134.561"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="366.666" y1="114.213" x2="362.973" y2="127.111"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="355.185" y1="111.35" x2="352.397" y2="124.473"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="343.529" y1="109.296" x2="341.666" y2="122.582"/>
-
-						<line fill="none" stroke="#00AEEF" stroke-width="0.9583" stroke-miterlimit="10" x1="331.761" y1="108.059" x2="330.827" y2="121.442"/>
-				</g>
-			</g>
-
-		</g>
-		<g>
-			<path fill="none" stroke="#EF0000" stroke-width="4.8923" stroke-miterlimit="10" d="M410.928,151.412
-				c39.928,28.153,66.011,74.632,66.011,127.203"/>
-			<path fill="none" stroke="#EF9B00" stroke-width="4.8923" stroke-miterlimit="10" d="M370.589,131.016
-				c14.515,4.836,28.08,11.754,40.339,20.396"/>
-			<path fill="none" stroke="#00EF50" stroke-width="4.8923" stroke-miterlimit="10" d="M307.828,123.662
-				c4.473-0.385,9.001-0.582,13.575-0.582c17.188,0,33.728,2.787,49.186,7.936"/>
-			<path fill="none" stroke="#FBCF40" stroke-width="4.8923" stroke-miterlimit="10" d="M165.867,278.615
-				c0-81.328,62.419-148.076,141.961-154.953"/>
-		</g>
-		<g>
-			<g>
-				<linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="320.7188" y1="170.5806" x2="320.7188" y2="426.1707">
-					<stop  offset="0" style="stop-color:#FFFFFF"/>
-					<stop  offset="0.4616" style="stop-color:#FCFCFC"/>
-					<stop  offset="0.8481" style="stop-color:#F1F1F1"/>
-					<stop  offset="1" style="stop-color:#EBEBEB"/>
-				</linearGradient>
-				<circle fill="url(#SVGID_5_)" cx="320.719" cy="276.396" r="111.679"/>
-				<linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="320.7192" y1="388.5732" x2="320.7192" y2="164.2197">
-					<stop  offset="0" style="stop-color:#FAFAFA"/>
-					<stop  offset="0.4377" style="stop-color:#F1F1F1"/>
-					<stop  offset="1" style="stop-color:#EDEDED"/>
-				</linearGradient>
-
-					<circle fill="none" stroke="url(#SVGID_6_)" stroke-width="0.9946" stroke-miterlimit="10" cx="320.719" cy="276.396" r="111.679"/>
-			</g>
-		</g>
-		<polygon fill="#FF0000" points="258.502,157.896 226.36,102.224 224.874,83.536 217.409,87.846 217.208,87.498 217.409,87.846
-			209.945,92.154 225.387,102.786 257.528,158.459 		"/>
-		<g>
-			<g>
-				<g>
-					<linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="321.186" y1="135.8301" x2="321.186" y2="539.1757">
-						<stop  offset="0" style="stop-color:#FFFFFF"/>
-						<stop  offset="0.5455" style="stop-color:#F6F6F6"/>
-						<stop  offset="1" style="stop-color:#EBEBEB"/>
-					</linearGradient>
-				</g>
-			</g>
-		</g>
-		<g>
-			<g>
-                <text x="240" style="font-size: 124;" y="290" fill="#FBCF40">13</text>
-                <text x="295" style="font-size: 28" y="365" fill="darkgrey">BMI</text>
-			</g>
-		</g>
-	</g>
-	<g>
         <g>
-            <path fill="#DE0108" d="M320.583,642.736v18.305l8.813-18.517C326.473,642.648,323.538,642.734,320.583,642.736z"/>
-            <path fill="#A70002" d="M311.779,642.545l8.804,18.496v-18.305c-0.07,0.001-0.139,0.004-0.209,0.004      C317.493,642.74,314.631,642.66,311.779,642.545z"/>
+            <path fill="#A8AAAD" d="M138.848,96.239h-3.788l-0.382,2.551c0.229-0.031,0.443-0.061,0.81-0.061
+						c0.764,0,1.527,0.168,2.138,0.535c0.779,0.443,1.42,1.298,1.42,2.551c0,1.939-1.542,3.391-3.696,3.391
+						c-1.084,0-2-0.306-2.474-0.611l0.336-1.023c0.413,0.245,1.222,0.55,2.123,0.55c1.268,0,2.352-0.825,2.352-2.154
+						c-0.015-1.283-0.871-2.199-2.856-2.199c-0.565,0-1.008,0.061-1.375,0.107l0.641-4.766h4.75V96.239z"/>
         </g>
+        <g>
+            <path fill="#A8AAAD" d="M169.473,47.559h-0.03l-1.726,0.932l-0.26-1.023l2.169-1.161h1.146v9.928h-1.298V47.559z"/>
+            <path fill="#A8AAAD" d="M180.987,51.164c0,3.375-1.252,5.239-3.452,5.239c-1.94,0-3.253-1.817-3.284-5.102
+						c0-3.33,1.436-5.163,3.452-5.163C179.795,46.139,180.987,48.002,180.987,51.164z M175.595,51.316
+						c0,2.582,0.794,4.048,2.016,4.048c1.375,0,2.031-1.604,2.031-4.139c0-2.444-0.626-4.048-2.016-4.048
+						C176.451,47.177,175.595,48.613,175.595,51.316z"/>
+        </g>
+        <g>
+            <path fill="#A8AAAD" d="M236.521,7.592h-0.03l-1.726,0.932l-0.26-1.023l2.169-1.161h1.146v9.928h-1.298V7.592z"/>
+            <path fill="#A8AAAD" d="M247.363,7.47h-3.788l-0.382,2.551c0.229-0.031,0.443-0.061,0.81-0.061
+						c0.764,0,1.527,0.168,2.138,0.535c0.779,0.443,1.42,1.298,1.42,2.551c0,1.939-1.542,3.391-3.696,3.391
+						c-1.084,0-2-0.306-2.474-0.611l0.336-1.023c0.413,0.244,1.222,0.55,2.123,0.55c1.268,0,2.352-0.825,2.352-2.154
+						c-0.015-1.283-0.871-2.199-2.856-2.199c-0.565,0-1.008,0.061-1.375,0.107l0.641-4.766h4.75V7.47z"/>
+        </g>
+        <g>
+            <path fill="#A8AAAD" d="M296.47,6.388V5.563l1.054-1.023c2.536-2.413,3.681-3.696,3.696-5.193c0-1.008-0.489-1.939-1.97-1.939
+						c-0.901,0-1.65,0.458-2.108,0.84L296.714-2.7c0.688-0.581,1.665-1.008,2.811-1.008c2.138,0,3.04,1.466,3.04,2.887
+						c0,1.833-1.329,3.314-3.421,5.331l-0.794,0.733v0.03h4.46v1.115H296.47z"/>
+            <path fill="#A8AAAD" d="M310.9,1.317c0,3.375-1.252,5.239-3.451,5.239c-1.94,0-3.254-1.817-3.285-5.102
+						c0-3.33,1.436-5.163,3.453-5.163C309.709-3.708,310.9-1.845,310.9,1.317z M305.509,1.47c0,2.582,0.794,4.048,2.017,4.048
+						c1.374,0,2.031-1.604,2.031-4.139c0-2.444-0.627-4.048-2.017-4.048C306.364-2.669,305.509-1.233,305.509,1.47z"/>
+        </g>
+        <g>
+            <path fill="#A8AAAD" d="M361.004,15.369v-0.825l1.053-1.023c2.536-2.413,3.682-3.696,3.697-5.193
+						c0-1.008-0.489-1.939-1.971-1.939c-0.901,0-1.65,0.458-2.107,0.84l-0.428-0.947c0.688-0.581,1.664-1.008,2.811-1.008
+						c2.138,0,3.039,1.466,3.039,2.887c0,1.833-1.329,3.314-3.422,5.331l-0.794,0.733v0.03h4.46v1.115H361.004z"/>
+            <path fill="#A8AAAD" d="M374.762,6.571h-3.787l-0.383,2.551c0.229-0.031,0.443-0.061,0.811-0.061
+						c0.764,0,1.527,0.168,2.138,0.535c0.779,0.443,1.421,1.298,1.421,2.551c0,1.939-1.543,3.391-3.697,3.391
+						c-1.084,0-2-0.306-2.474-0.611l0.336-1.023c0.413,0.245,1.222,0.55,2.123,0.55c1.268,0,2.353-0.825,2.353-2.154
+						c-0.016-1.283-0.871-2.199-2.856-2.199c-0.565,0-1.009,0.061-1.375,0.107l0.642-4.766h4.75V6.571z"/>
+        </g>
+        <g>
+            <path fill="#A8AAAD" d="M427.789,54.692c0.381,0.244,1.268,0.626,2.199,0.626c1.726,0,2.26-1.1,2.244-1.924
+						c-0.015-1.39-1.268-1.986-2.565-1.986h-0.749V50.4h0.749c0.978,0,2.215-0.504,2.215-1.68c0-0.794-0.504-1.497-1.741-1.497
+						c-0.795,0-1.559,0.352-1.986,0.657l-0.351-0.978c0.519-0.382,1.527-0.764,2.597-0.764c1.955,0,2.841,1.161,2.841,2.368
+						c0,1.023-0.61,1.894-1.833,2.337v0.03c1.223,0.245,2.215,1.161,2.215,2.551c0,1.589-1.237,2.979-3.62,2.979
+						c-1.114,0-2.093-0.351-2.581-0.672L427.789,54.692z"/>
+            <path fill="#A8AAAD" d="M441.898,51.164c0,3.375-1.252,5.239-3.451,5.239c-1.94,0-3.254-1.817-3.285-5.102
+						c0-3.33,1.437-5.163,3.453-5.163C440.707,46.139,441.898,48.002,441.898,51.164z M436.507,51.316
+						c0,2.582,0.794,4.048,2.017,4.048c1.374,0,2.031-1.604,2.031-4.139c0-2.444-0.627-4.048-2.017-4.048
+						C437.362,47.177,436.507,48.613,436.507,51.316z"/>
+        </g>
+        <g>
+            <path fill="#A8AAAD" d="M467.689,99.899c0.381,0.244,1.268,0.626,2.199,0.626c1.726,0,2.26-1.1,2.244-1.924
+						c-0.015-1.39-1.268-1.986-2.565-1.986h-0.749v-1.008h0.749c0.978,0,2.215-0.504,2.215-1.68c0-0.794-0.504-1.497-1.741-1.497
+						c-0.795,0-1.559,0.352-1.986,0.657l-0.351-0.978c0.519-0.382,1.527-0.764,2.597-0.764c1.955,0,2.841,1.161,2.841,2.368
+						c0,1.023-0.61,1.894-1.833,2.337v0.03c1.223,0.245,2.215,1.161,2.215,2.551c0,1.588-1.237,2.979-3.62,2.979
+						c-1.114,0-2.093-0.351-2.581-0.672L467.689,99.899z"/>
+            <path fill="#A8AAAD" d="M481.127,92.644h-3.788l-0.382,2.551c0.229-0.031,0.443-0.061,0.81-0.061
+						c0.764,0,1.527,0.168,2.138,0.535c0.779,0.443,1.421,1.298,1.421,2.551c0,1.939-1.542,3.391-3.696,3.391
+						c-1.084,0-2-0.306-2.475-0.611l0.336-1.023c0.413,0.244,1.223,0.55,2.123,0.55c1.268,0,2.353-0.825,2.353-2.154
+						c-0.015-1.283-0.87-2.199-2.856-2.199c-0.564,0-1.008,0.061-1.374,0.107l0.642-4.766h4.75V92.644z"/>
+        </g>
+        <g>
+            <path fill="#A8AAAD" d="M493.527,163.251v-2.704h-4.612v-0.886l4.43-6.339h1.451v6.171h1.39v1.054h-1.39v2.704H493.527z
+						 M493.527,159.494v-3.314c0-0.52,0.016-1.039,0.047-1.558h-0.047c-0.305,0.581-0.549,1.008-0.824,1.466l-2.429,3.375v0.031
+						H493.527z"/>
+            <path fill="#A8AAAD" d="M503.805,158.181c0,3.375-1.253,5.239-3.452,5.239c-1.94,0-3.253-1.817-3.284-5.102
+						c0-3.33,1.436-5.163,3.452-5.163C502.613,153.155,503.805,155.019,503.805,158.181z M498.412,158.333
+						c0,2.582,0.795,4.048,2.017,4.048c1.374,0,2.031-1.604,2.031-4.139c0-2.444-0.626-4.048-2.017-4.048
+						C499.268,154.194,498.412,155.63,498.412,158.333z"/>
+        </g>
+    </g>
 
-        </g>
-            </g>
-        </g>
 </g>
+
+<g>
+    <path fill="none" stroke="#ED1C24" stroke-width="4.8923" stroke-miterlimit="10" d="M394.961,66.724
+				c39.928,28.153,66.011,74.632,66.011,127.203"/>
+    <path fill="none" stroke="#EE9C21" stroke-width="4.8923" stroke-miterlimit="10" d="M354.622,46.328
+				c14.515,4.836,28.08,11.754,40.339,20.396"/>
+    <path fill="none" stroke="#65BC46" stroke-width="4.8923" stroke-miterlimit="10" d="M291.861,38.974
+				c4.473-0.385,9.001-0.582,13.575-0.582c17.188,0,33.728,2.787,49.186,7.936"/>
+    <path fill="none" stroke="#FCD041" stroke-width="4.8923" stroke-miterlimit="10" d="M149.9,193.927
+				c0-81.328,62.419-148.076,141.961-154.953"/>
+</g>
+<!--
+<polygon style="-webkit-transform: rotate({{tranform}});-webkit-transform-origin: 24% 100%;-ms-transform: rotate({{tranform}});-ms-transform-origin: 24% 100%;-moz-transform: rotate({{tranform}});-moz-transform-origin: 24% 100%;-o-transform: rotate({{tranform}});-o-transform-origin: 24% 100%;transform: rotate({{tranform}});transform-origin: 24% 100%;" fill="#ED2224" points="295,-27 303.5,-27 312,-27 304.6,-7 304.6,180 303.7,180 303.6,-7  295,-27"/>
+-->
+<polygon style="-webkit-transform: rotate({{tranform}});-webkit-transform-origin: 304.752 191.708" fill="#ED2224" points="295,-27 303.5,-27 312,-27 304.6,-14 304.6,45 303.7,45 303.6,-14 295,-27"/>
+
+<g>
+    <linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="304.752" y1="85.8926" x2="304.752" y2="341.4827">
+        <stop  offset="0" style="stop-color:#FFFFFF"/>
+        <stop  offset="0.4959" style="stop-color:#F9F9F9"/>
+        <stop  offset="0.9111" style="stop-color:#EEEEEE"/>
+        <stop  offset="1" style="stop-color:#EBEBEB"/>
+    </linearGradient></g>
+<circle fill="url(#SVGID_5_)" cx="304.752" cy="191.708" r="111.679"/>
+<g>   <linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="304.7524" y1="303.8853" x2="304.7524" y2="79.5317">
+    <stop  offset="0" style="stop-color:#FAFAFA"/>
+    <stop  offset="0.4117" style="stop-color:#F1F1F1"/>
+    <stop  offset="1" style="stop-color:#EDEDED"/>
+</linearGradient>
+</g>
+<circle fill="none" stroke="url(#SVGID_6_)" stroke-width="0.9946" stroke-miterlimit="10" cx="304.752" cy="191.708" r="111.679"/>
+
+<g>
+    <path fill="#F2F2F2" d="M504.451,167.917l-49.323,5.79c-4.194-33.338-19.22-64.163-43.362-88.306
+				C383.023,56.66,344.809,40.83,304.162,40.83c-40.647,0-78.862,15.83-107.604,44.572c-24.143,24.142-39.168,54.968-43.362,88.305
+				l-49.322-5.79c-0.919,7.824-1.384,15.805-1.384,23.724c0,111.203,90.47,201.673,201.672,201.673
+				c111.202,0,201.672-90.47,201.672-201.673C505.834,183.719,505.369,175.739,504.451,167.917z M304.162,56.682
+				c69.377,0,126.649,51.825,135.215,118.875h-0.002c0.621,5.295,0.936,10.705,0.936,16.083c0,75.073-61.076,136.15-136.149,136.15
+				c-75.073,0-136.15-61.077-136.15-136.15c0-5.376,0.316-10.787,0.938-16.084l-0.002-0.001
+				C177.513,108.507,234.785,56.682,304.162,56.682z"/>
+    <path fill="#DCDFE0" d="M507.625,170.034l-49.324,5.79c-4.193-33.337-19.219-64.164-43.362-88.307
+				c-28.741-28.742-66.956-44.572-107.603-44.572c-40.648,0-78.862,15.83-107.604,44.572
+				c-24.143,24.142-39.169,54.969-43.362,88.306l-49.323-5.791c-0.918,7.824-1.383,15.807-1.383,23.725
+				c0,111.203,90.47,201.673,201.673,201.673c111.201,0,201.672-90.47,201.672-201.673
+				C509.008,185.834,508.542,177.854,507.625,170.034z M307.336,58.798c69.377,0,126.648,51.826,135.215,118.874h-0.002
+				c0.621,5.295,0.937,10.707,0.937,16.084c0,75.073-61.077,136.149-136.149,136.149c-75.075,0-136.151-61.076-136.151-136.149
+				c0-5.376,0.315-10.787,0.937-16.086h-0.002C180.686,110.623,237.958,58.798,307.336,58.798z"/>
+
+
+
+    <g>
+        <linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="305.2192" y1="51.1421" x2="305.2192" y2="454.4877">
+            <stop  offset="0" style="stop-color:#FFFFFF"/>
+            <stop  offset="0.6161" style="stop-color:#F3F3F3"/>
+            <stop  offset="1" style="stop-color:#EBEBEB"/>
+        </linearGradient></g>
+    <path fill="url(#SVGID_7_)" d="M505.509,168.976l-49.323,5.79c-4.193-33.338-19.22-64.165-43.363-88.308
+						c-28.741-28.742-66.955-44.57-107.603-44.57s-78.863,15.828-107.604,44.57c-24.142,24.143-39.169,54.97-43.362,88.306
+						l-49.323-5.791c-0.918,7.824-1.384,15.807-1.384,23.726c0,111.202,90.47,201.672,201.673,201.672
+						c111.202,0,201.672-90.47,201.672-201.672C506.892,184.777,506.427,176.795,505.509,168.976z M305.22,57.74
+						c69.377,0,126.649,51.826,135.215,118.876h-0.001c0.621,5.293,0.936,10.705,0.936,16.083
+						c0,75.073-61.076,136.149-136.149,136.149c-75.074,0-136.151-61.076-136.151-136.149c0-5.376,0.316-10.788,0.938-16.085h-0.002
+						C178.571,109.565,235.842,57.74,305.22,57.74z"/>
+
+
+</g>
+<g>
+    <g>
+        <text x="230" ng-style="{'font-size': BMI > 99 ?  90 : 120}" y="220" fill="#FBCF40">{{BMI}}</text>
+        <text x="280" style="font-size: 28;font-weight: bold" y="282" fill="darkgrey">BMI</text>
+
+    </g>
+</g>
+</g>
+<text x="310" style="font-size: 25;text-anchor: middle;" y="365"  fill="{{BMIinfoAlert}}">{{BMIinfo}}</text>
+<g>
+    <g>
+        <g>
+            <linearGradient id="SVGID_8_" gradientUnits="userSpaceOnUse" x1="307.0156" y1="573.3916" x2="307.0156" y2="19.1564">
+                <stop  offset="0" style="stop-color:#EDEDED"/>
+                <stop  offset="0.5315" style="stop-color:#E5E4E4"/>
+                <stop  offset="1" style="stop-color:#D9D9D8"/>
+            </linearGradient></g>
+        <path fill="url(#SVGID_8_)" d="M536.855,338.807c-47.641,75.703-136.932,123.017-232.983,123.017S123.535,414.51,75.894,338.807
+					h-88.246v170.677h638.737V338.807H536.855z"/>
+        <g> <linearGradient id="SVGID_9_" gradientUnits="userSpaceOnUse" x1="307.0156" y1="509.4844" x2="307.0156" y2="338.8076">
+            <stop  offset="0" style="stop-color:#FFFFFF"/>
+            <stop  offset="1" style="stop-color:#DFDFDE"/>
+        </linearGradient></g>
+        <path fill="url(#SVGID_9_)" d="M624.298,340.894v166.503H-10.265V340.894h85.01c48.964,77.05,134.529,123.017,229.128,123.017
+					c96.254,0,185.852-47.109,234.132-123.017H624.298 M626.385,338.807h-89.529c-47.641,75.703-136.932,123.017-232.983,123.017
+					S123.535,414.51,75.894,338.807h-88.246v170.677h638.737V338.807L626.385,338.807z"/>
+
+        <g>
+
+
+
+            <g>
+                <linearGradient id="SVGID_10_" gradientUnits="userSpaceOnUse" x1="147.5176" y1="243.3662" x2="147.5176" y2="512.0628">
+                    <stop  offset="0" style="stop-color:#FFFFFF"/>
+                    <stop  offset="0.5981" style="stop-color:#F9F9F9"/>
+                    <stop  offset="1" style="stop-color:#F1F0F0"/>
+                </linearGradient></g>
+            <path fill="{{clickFill1}}" d="M305.822,472.287c-102.005,0-190.967-59.381-233.5-126.968h-83.108v156.654h316.608V472.287z"
+                    />
+            <g> <linearGradient id="SVGID_11_" gradientUnits="userSpaceOnUse" x1="147.5176" y1="501.9727" x2="147.5176" y2="345.3193">
+                <stop  offset="0" style="stop-color:#FAFAFA"/>
+                <stop  offset="0.4117" style="stop-color:#F1F1F1"/>
+                <stop  offset="1" style="stop-color:#EDEDED"/>
+            </linearGradient> </g>
+            <path fill="url(#SVGID_11_)" d="M71.798,346.268c39.92,63.085,127.284,126.586,233.074,126.966v27.789H-9.837V346.268H71.798
+							 M72.322,345.319h-83.108v156.654h316.608v-29.686C203.817,472.287,114.855,412.906,72.322,345.319L72.322,345.319z"/>
+
+
+
+
+
+            <g>
+
+                <linearGradient id="SVGID_12_" gradientUnits="userSpaceOnUse" x1="-3201.1123" y1="243.3667" x2="-3201.1123" y2="512.0624" gradientTransform="matrix(-1 0 0 1 -2734.5967 0)">
+                    <stop  offset="0" style="stop-color:#FFFFFF"/>
+                    <stop  offset="0.5981" style="stop-color:#F9F9F9"/>
+                    <stop  offset="1" style="stop-color:#F1F0F0"/>
+                </linearGradient></g>
+            <path fill="{{clickFill}}" d="M308.211,472.287c102.006,0,190.967-59.381,233.5-126.968h83.109v156.654H308.211V472.287z"/>
+            <g> <linearGradient id="SVGID_13_" gradientUnits="userSpaceOnUse" x1="466.5156" y1="501.9727" x2="466.5156" y2="345.3193">
+                <stop  offset="0" style="stop-color:#FAFAFA"/>
+                <stop  offset="0.4117" style="stop-color:#F1F1F1"/>
+                <stop  offset="1" style="stop-color:#EDEDED"/>
+            </linearGradient> </g>
+            <path fill="url(#SVGID_13_)" d="M623.871,346.268v154.755H309.16v-27.789c105.79-0.38,193.154-63.881,233.074-126.966H623.871
+							 M624.82,345.319h-83.109c-42.533,67.587-131.494,126.968-233.5,126.968v29.686H624.82V345.319L624.82,345.319z"/>
+
+
+        </g>
+    </g>
+    <g>
+        <g>
+
+        </g>
+    </g>
+    <g>
+        <text x="15" style="font-size: 30;" y="425" fill="darkgrey">Height</text>
+        <text x="510" style="font-size: 30;" y="425" fill="darkgrey">Weight</text>
+        <g on-tap="changeHeightScale({{heightIndex}})">
+
+            <text x="10" style="font-size: 45;" y="472" fill="#00BAFF">{{heightUnit == 'Ft in' ? convertFeet(heightIndex || 0) : heightIndex || 0}}{{heightUnit}}</text>
+            <text x="20" style="font-size: 20;" y="500" fill="{{changeHeightScaleCMFill}}">Cm</text>
+            <text x="55" style="font-size: 20;" y="500" fill="grey" >/</text>
+            <text x="75" style="font-size: 20;" y="500" fill="{{changeHeightScaleFTFill}}">ft In</text>
+        </g>
+        <g on-tap="changeWeightScale({{weightIndex}})">
+            <text x="480" style="font-size: 45;" y="468" fill="#FF7400"  >{{weightIndex || 0}}{{weightUnit}}</text>
+            <text x="510" style="font-size: 20;" y="500" fill="{{changeHeightScaleKGFill}}"  >Kg</text>
+            <text x="540" style="font-size: 20;" y="500" fill="grey" >/</text>
+            <text x="550" style="font-size: 20;" y="500" fill="{{changeHeightScaleLBFill}}" >Lbs</text>
+        </g>
+    </g>
+</g>
+<g>
+    <g>
+        <g>
+            <g>
+                <linearGradient id="SVGID_14_" gradientUnits="userSpaceOnUse" x1="67.7417" y1="599.7773" x2="541.3242" y2="599.7773">
+                    <stop  offset="0" style="stop-color:#F0F0F0"/>
+                    <stop  offset="0.5108" style="stop-color:#F7F7F7"/>
+                    <stop  offset="1" style="stop-color:#F0F0F0"/>
+                </linearGradient>
+                <path fill="url(#SVGID_14_)" d="M70.871,662.52h467.325c1.729,0,3.129-1.4,3.129-3.129V540.164c0-1.729-1.4-3.129-3.129-3.129
+						H386.3c-24.569,13.512-52.789,21.207-82.81,21.207c-30.021,0-58.24-7.695-82.81-21.207H70.871c-1.728,0-3.129,1.4-3.129,3.129
+						v119.227C67.742,661.119,69.143,662.52,70.871,662.52z"/>
+            </g>
+            <defs>
+                <filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="67.742" y="537.035" width="473.583" height="125.484">
+
+                    <feColorMatrix  type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source"/>
+                </filter>
+            </defs>
+            <mask maskUnits="userSpaceOnUse" x="67.742" y="537.035" width="473.583" height="125.484" id="SVGID_15_">
+                <g filter="url(#Adobe_OpacityMaskFilter)">
+
+
+                </g>
+            </mask>
+            <g id="gelement" opacity="0.12" mask="url(#SVGID_15_)">
+                <path fill="#030303" d="M70.871,662.52h467.325c1.729,0,3.129-1.4,3.129-3.129V540.164c0-1.729-1.4-3.129-3.129-3.129H386.3
+						c-24.569,13.512-52.789,21.207-82.81,21.207c-30.021,0-58.24-7.695-82.81-21.207H70.871c-1.728,0-3.129,1.4-3.129,3.129
+						v119.227C67.742,661.119,69.143,662.52,70.871,662.52z"/>
+            </g>
+        </g>
+        <g>
+        </g>
+        <g>
+            <path fill="#DC1F26" d="M304.616,558.049v18.305l8.813-18.518C310.506,557.961,307.571,558.047,304.616,558.049z"/>
+            <path fill="#A61E22" d="M295.812,557.857l8.804,18.496v-18.305c-0.07,0-0.139,0.004-0.209,0.004
+					C301.526,558.053,298.664,557.973,295.812,557.857z"/>
+        </g>
+        <g>
+            <path fill="#E7E7E7" d="M537.525,537.035c1.729,0,3.129,1.4,3.129,3.129v119.227c0,1.729-1.4,3.129-3.129,3.129H70.2
+					c-1.728,0-3.129-1.4-3.129-3.129V540.164c0-1.729,1.401-3.129,3.129-3.129h149.81c24.569,13.512,52.789,21.207,82.81,21.207
+					c30.02,0,58.241-7.695,82.809-21.207H537.525 M537.525,534.949H385.629h-0.536l-0.469,0.258
+					c-24.92,13.705-53.207,20.949-81.804,20.949c-28.597,0-56.884-7.244-81.805-20.949l-0.47-0.258h-0.536H70.2
+					c-2.875,0-5.215,2.339-5.215,5.215v119.227c0,2.875,2.339,5.215,5.215,5.215h467.325c2.876,0,5.215-2.34,5.215-5.215V540.164
+					C542.74,537.288,540.401,534.949,537.525,534.949L537.525,534.949z"/>
+        </g>
+    </g>
+    <text x="270" style="font-size: 22;" y="550" fill="#00BAFF">Height</text>
+    <text x="270" style="font-size: 22;" y="717" fill="#FF7400">Weight</text>
+
+</g>
+<g>
+
+    <g>
+        <g>
+            <g>
+                <linearGradient id="SVGID_16_" gradientUnits="userSpaceOnUse" x1="67.7417" y1="765.5156" x2="541.3242" y2="765.5156">
+                    <stop  offset="0" style="stop-color:#F0F0F0"/>
+                    <stop  offset="0.5108" style="stop-color:#F7F7F7"/>
+                    <stop  offset="1" style="stop-color:#F0F0F0"/>
+                </linearGradient>
+                <path fill="url(#SVGID_16_)" d="M70.871,828.258h467.325c1.729,0,3.129-1.4,3.129-3.129V705.902c0-1.73-1.4-3.129-3.129-3.129
+						H386.3c-24.569,13.512-52.789,21.205-82.81,21.205c-30.021,0-58.24-7.693-82.81-21.205H70.871
+						c-1.728,0-3.129,1.398-3.129,3.129v119.227C67.742,826.857,69.143,828.258,70.871,828.258z"/>
+            </g>
+            <defs>
+
+                <filter id="Adobe_OpacityMaskFilter_1_" filterUnits="userSpaceOnUse" x="67.742" y="702.773" width="473.583" height="125.484">
+
+                    <feColorMatrix  type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source"/>
+                </filter>
+            </defs>
+            <mask maskUnits="userSpaceOnUse" x="67.742" y="702.773" width="473.583" height="125.484" id="SVGID_17_">
+                <g filter="url(#Adobe_OpacityMaskFilter_1_)">
+
+
+                </g>
+            </mask>
+            <g id="gelement2" opacity="0.12" mask="url(#SVGID_17_)">
+                <path fill="#030303" d="M70.871,828.258h467.325c1.729,0,3.129-1.4,3.129-3.129V705.902c0-1.73-1.4-3.129-3.129-3.129H386.3
+						c-24.569,13.512-52.789,21.205-82.81,21.205c-30.021,0-58.24-7.693-82.81-21.205H70.871c-1.728,0-3.129,1.398-3.129,3.129
+						v119.227C67.742,826.857,69.143,828.258,70.871,828.258z"/>
+            </g>
+        </g>
+
+
+
+
+        <g>
+            <path fill="#DC1F26" d="M304.616,723.787v18.305l8.813-18.518C310.506,723.699,307.571,723.785,304.616,723.787z"/>
+            <path fill="#A61E22" d="M295.812,723.596l8.804,18.496v-18.305c-0.07,0-0.139,0.004-0.209,0.004
+					C301.526,723.791,298.664,723.711,295.812,723.596z"/>
+        </g>
+        <g>
+            <path fill="#E7E7E7" d="M537.525,702.773c1.729,0,3.129,1.398,3.129,3.129v119.227c0,1.729-1.4,3.129-3.129,3.129H70.2
+					c-1.728,0-3.129-1.4-3.129-3.129V705.902c0-1.73,1.401-3.129,3.129-3.129h149.81c24.569,13.512,52.789,21.205,82.81,21.205
+					c30.02,0,58.241-7.693,82.809-21.205H537.525 M537.525,700.688H385.629h-0.536l-0.469,0.258
+					c-24.918,13.704-53.205,20.947-81.804,20.947s-56.887-7.243-81.805-20.947l-0.47-0.258h-0.536H70.2
+					c-2.875,0-5.215,2.339-5.215,5.215v119.227c0,2.875,2.339,5.215,5.215,5.215h467.325c2.876,0,5.215-2.34,5.215-5.215V705.902
+					C542.74,703.026,540.401,700.688,537.525,700.688L537.525,700.688z"/>
+        </g>
+        <g>
+
+        </g>
+    </g>
+</g>
+</g>
+
 </svg>
-<div zooming="true" direction="xy" style="width: 300px; height: 100px">
-<span  ng-repeat="height in heightMeter10_5_1" style="font-size : {{height.fontSize+'px'}}">|</span></div>
-  <!--  <div>
-        <span style="font-size: 40px;" ng-repeat="smallWeight in weightMeter10" fill="none" stroke="#FF7400" stroke-width="1.043" stroke-miterlimit="10">|</span>
-        <span style="font-size: 30px;" ng-repeat="mediumWeight in weightMeter5"fill="none" stroke="#FF7400" stroke-width="1.5645" stroke-miterlimit="10" >|</span>
-        <span style="font-size: 20px;" ng-repeat="smallWeight in weightMeter1" fill="none" stroke="#FF7400" stroke-width="1.043" stroke-miterlimit="10">|</span>
-
-    </div>-->
-
-<!--<svg>
-
-    <rect x="0" y="400" width="320" height="150"
-          style="fill:white;stroke:rgb(238,238,238);stroke-width:15;opacity:1"  />
-    <text x="40" style="font-size: 30;" y="450" fill="darkgrey" >Height</text>
-    <rect x="320" y="400" width="320" height="150"
-          style="fill:white;stroke:rgb(238,238,238);stroke-width:15;opacity:1"  />
-    <text x="510" style="font-size: 30;" y="450" fill="darkgrey"  >Weight</text>
-
-
-    <text x="25" style="font-size: 45;" y="500" fill="#00BAFF" >175 cm</text>
-    <text x="45" style="font-size: 20;" y="530" fill="#00BAFF" >Cm</text>
-    <text x="85" style="font-size: 20;" y="530" fill="grey" >/</text>
-    <text x="95" style="font-size: 20;" y="530" fill="grey" >ft In</text>
-    <text x="470" style="font-size: 45;" y="500" fill="#FF7400"  >110 kg</text>
-    <text x="510" style="font-size: 20;" y="530" fill="#FF7400"  >Kg</text>
-    <text x="540" style="font-size: 20;" y="530" fill="grey"  >/</text>
-    <text x="550" style="font-size: 20;" y="530" fill="grey"  >Lbs</text>
-
-    <ellipse cx="310" cy="240" rx="240" ry="240" fill="rgb(238,238,238)" />
-    <ellipse cx="310" cy="240" rx="220" ry="220" fill="lightgrey" />
-    <ellipse cx="310" cy="240" rx="205" ry="205" fill="white" />
-    <ellipse cx="310" cy="240" rx="127" ry="127" fill="lightgrey " />
-    <polygon fill="#FF0000" points="258.502,157.896 226.36,102.224 224.874,83.536 217.409,87.846 217.208,87.498 217.409,87.846
-        209.945,92.154 225.387,102.786 257.528,158.459 		"/>
-    <ellipse cx="310" cy="240" rx="105" ry="105" fill="white" />
-    <ellipse cx="310" cy="240" rx="90" ry="90" fill="white" />
-    &lt;!&ndash;<ellipse cx="310" cy="240" rx="100" ry="100" fill="lightgrey" />&ndash;&gt;
-        <ellipse cx="310" cy="240" rx="90" ry="90" fill="white" />
-        <text x="250" style="font-size: 104;" y="260" fill="orange">13</text>
-        <text x="275" style="font-size: 32" y="320" fill="darkgrey">BMI</text>
-        &lt;!&ndash;<path d="M 190 180 q 100 -145 225 -20" stroke="blue" stroke-width="5" fill="none" />&ndash;&gt;
-
-        <rect x="120" y="590" width="400" height="135"
-              style="fill:white;stroke-width:10;opacity:1" />
-        <ellipse cx="320" cy="575" rx="90" ry="45" style="fill:rgb(243,243,243)" />
-
-
-
-        <rect x="120" y="770" width="400" height="135"
-              style="fill:white;stroke-width:10;opacity:1" />
-        <ellipse cx="320" cy="755" rx="90" ry="45" style="fill:rgb(243,243,243)" />
-        <ellipse cx="320" cy="925" rx="90" ry="45" style="fill:rgb(243,243,243)" />
-        <line x1="195" y1="0" x2="195.3" y2="10" style="stroke:rgb(255,0,0);stroke-width:2" />
-        <line x1="195" y1="0" x2="195.3" y2="10" style="stroke:rgb(255,0,0);stroke-width:2" />
-
-
-        &lt;!&ndash;<line fill="none" stroke="#ff7400" stroke-miterlimit="10" stroke-width="2.086" x1="227.88" y1="912.945" x2="227.88" y2="872.617" />&ndash;&gt;
-        &lt;!&ndash;<line fill="none" stroke="#ff7400" stroke-miterlimit="10" stroke-width="1.5645" x1="274.638" y1="912.945" x2="274.638" y2="882.012" />&ndash;&gt;
-        &lt;!&ndash;<line fill="none" stroke="#ff7400" stroke-miterlimit="10" stroke-width="1.043" x1="106.311" y1="912.945" x2="106.311" y2="891.406" />&ndash;&gt;
-    </svg>-->
+<div id="scrollId" ng-show="changeHeightScaleCM == true">
+    <ion-scroll width="470px" height="100px" direction="x"  on-scroll="getScrollPosition('heightClass')">
+        <div style="width: 1400px;padding-top: 60px;justify-content: space-between;display:flex;">
+            <span class="heightClass" ng-repeat="height in heightMeter10_5_1" style="position:relative;font-size : {{height.fontSize+'px'}};color:#00BAFF;margin-right: 1px" ><span ng-if="$index % 10 == 0" style="position:absolute;top: -15px; font-size: 11px; font-weight: bold;">{{height.heightNum}}</span>|</span>
+        </div>
+    </ion-scroll>
+</div>
+<div id="scrollId2" ng-show="changeWeightScaleKG == true">
+    <ion-scroll width="470px" height="100px" direction="x"  on-scroll="getScrollPosition('weightClass')">
+        <div style="width: 2000px;padding-top: 30px;justify-content: space-between;display:flex;">
+            <span class="weightClass" ng-repeat="weight in weightMeter10_5_1" style="font-size : {{weight.fontSize+'px'}};color:#FF7400;margin-right: 1px"><span ng-if="$index % 10 == 0" style="position:absolute;top: 13px; font-size: 11px; font-weight: bold;">{{weight.weightNum}}</span>|</span>
+        </div>
+    </ion-scroll>
+</div>
+<div id="scrollId3"  ng-show="changeHeightScaleFT == true">
+    <ion-scroll width="470px" height="100px" direction="x"  on-scroll="getScrollPosition('heightClassFt')">
+        <div style="width: 1200px;padding-top: 60px;justify-content: space-between;display:flex;">
+            <span class="heightClassFt" ng-repeat="height in heightMeter10_5_1" style="position:relative;font-size : {{height.fontSize+'px'}};color:#00BAFF;margin-right: 1px "><span ng-if="$index % 12 == 0" style="position:absolute;top: -15px; font-size: 11px; font-weight: bold;">{{height.heightNum/10}}</span>|</span>
+        </div>
+    </ion-scroll>
+</div>
+<div id="scrollId4" ng-show="changeWeightScaleLB == true">
+    <ion-scroll width="470px" height="100px" direction="x"  on-scroll="getScrollPosition('weightClassLb')">
+        <div style="width: 2000px;padding-top: 30px;justify-content: space-between;display:flex;">
+            <span class="weightClassLb" ng-repeat="weight in weightMeter10_5_1" style="font-size : {{weight.fontSize+'px'}};color:#FF7400;margin-right: 1px"><span ng-if="$index % 10 == 0" style="position:absolute;top: 13px; font-size: 11px; font-weight: bold;">{{weight.weightNum}}</span>|</span>
+        </div>
+    </ion-scroll>
+</div>
 </div>
 </body>
-
-
-<script src="js/bmi.js"></script>
-
 </html>
